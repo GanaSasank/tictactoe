@@ -1,0 +1,157 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    max-width: 450px;
+    width: 90%;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Styling */
+input {
+    padding: 12px;
+    width: 80%;
+    font-size: 16px;
+    border: 2px solid #0d47a1;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 8px rgba(25, 118, 210, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 24px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #0d47a1;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1976d2;
+    transform: scale(1.05);
+}
+
+/* Board Styling */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #e3f2fd;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background-color: #bbdefb;
+}
+
+/* Turn Indicator */
+#turnIndicator {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d47a1;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Winner Stage Styling */
+#winnerText {
+    font-size: 48px; /* bigger */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 0 20px;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Winner Page Button */
+#playAgainBtn {
+    margin-top: 40px;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: #0d47a1;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Stage Titles */
+h2 {
+    color: #0d47a1;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#stage-winner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh; /* half of viewport height */
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+#playAgainBtn:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.05);
+}
