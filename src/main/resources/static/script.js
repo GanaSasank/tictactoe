@@ -23,7 +23,8 @@ document.getElementById("continueBtn").addEventListener("click", () => {
 });
 
 function connectWebSocket() {
-    ws = new WebSocket("ws://" + window.location.host + "/ws/game");
+    const protocol = window.location.protocol === "https:" ? "wss://" : "ws://";
+ws = new WebSocket(protocol + window.location.host + "/ws/game");
 
     ws.onopen = () => {
         ws.send(JSON.stringify({ type: "JOIN", playerName }));
